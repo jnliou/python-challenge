@@ -1,0 +1,7 @@
+Financial Analysis:
+--------------------------------
+Total months assessed: 86
+Total Profit/Loss assessed: $22564198
+Average total change: $-8311.11
+The greatest increase in profit was in Aug-16 ($1862002)
+The greatest decrease in profit was in Feb-14 ($-1825558)

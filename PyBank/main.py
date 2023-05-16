@@ -69,20 +69,17 @@ with open(pybank_csv) as csv_file:
     print(f"The greatest increase in profit was in {min_date} (${min_inc})")
 
 # Set the path for the output file
-output_directory = os.path.join(current_directory,'analysis')
-output_file = os.path.join(output_directory, 'pybank_final.csv')
+output_directory = os.path.join(current_directory, 'analysis')
+output_file = os.path.join(output_directory, 'pybank_final.txt')
 
 # Open the output file
 with open(output_file, "w") as datafile:
-    writer = csv.writer(datafile, delimiter='\t')
-
     # Write the rows
-    writer.writerow(['Financial Analysis:'])
-    writer.writerow(['--------------------------------'])
-    writer.writerow(['Total months assessed:', total_months])
-    writer.writerow(['Total Profit/Loss assessed:', f'${total_profit_loss}'])
-    writer.writerow(['Average total change:', f'${avg_change:.2f}'])
-    writer.writerow(['The greatest increase in profit is', f'${max_inc}', 'in', f'{max_date}'])
-    writer.writerow(['The greatest decrease in profit is', f'${min_inc}', 'in', f'{min_date}'])
-
+    datafile.write('Financial Analysis:\n')
+    datafile.write('--------------------------------\n')
+    datafile.write(f'Total months assessed: {total_months}\n')
+    datafile.write(f'Total Profit/Loss assessed: ${total_profit_loss}\n')
+    datafile.write(f'Average total change: ${avg_change:.2f}\n')
+    datafile.write(f'The greatest increase in profit was in {max_date} (${max_inc})\n')
+    datafile.write(f'The greatest decrease in profit was in {min_date} (${min_inc})\n')
 
